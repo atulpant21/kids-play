@@ -1,8 +1,6 @@
 import React, {Suspense} from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-import Home from '../screens/home/Home';
-import Settings from '../screens/settings/Settings';
 import { View, ActivityIndicator } from 'react-native';
 
 const Stack = createNativeStackNavigator();
