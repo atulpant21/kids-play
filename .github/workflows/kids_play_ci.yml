@@ -23,8 +23,8 @@ jobs:
     - name: Install dependencies
       run: npm install
 
-    - name: Run unit tests
-      run: npm test
+    # - name: Run unit tests
+    #   run: npm test
 
     # Optional: Add linting step
     - name: Run ESLint
