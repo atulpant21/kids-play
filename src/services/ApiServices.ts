@@ -1,5 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
-import { User, UserState } from '../models/User';
+import { User } from '../models/User';
 
 // export const fetchUsers = createAsyncThunk('users/fetchUsers', async (): Promise<any> => {
 
