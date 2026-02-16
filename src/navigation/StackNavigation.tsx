@@ -1,7 +1,7 @@
 import React, {Suspense} from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import { NavigationContainer } from '@react-navigation/native';
-import { View, ActivityIndicator } from 'react-native';
+import { View, ActivityIndicator, StyleSheet } from 'react-native';
 
 const Stack = createNativeStackNavigator();
 
@@ -12,7 +12,7 @@ const Login = React.lazy(() => import('../screens/login/Login'));
 
 // Fallback component while loading
 const LoadingScreen = () => (
-  <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+  <View style={styles.loading}>
     <ActivityIndicator size="large" />
   </View>
 );
@@ -42,3 +42,11 @@ const RootStack = () => {
 }
 
 export default RootStack
+
+const styles = StyleSheet.create({ 
+   loading:{
+    flex: 1, 
+    justifyContent: 'center', 
+    alignItems: 'center' 
+  }
+  })

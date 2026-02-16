@@ -13,7 +13,7 @@ interface Props {
 }
 
 const ListItem: React.FC<Props> = ({ user }) => {
-    const opacity = useSharedValue(0);
+  const opacity = useSharedValue(0);
   const translateY = useSharedValue(50); // Start position for slide-in
 
   useEffect(() => {
