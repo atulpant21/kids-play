@@ -8,6 +8,7 @@ const Stack = createNativeStackNavigator();
 // Lazily load the screen components
 const HomeScreen = React.lazy(() => import('../screens/home/Home'));
 const SettingsScreen = React.lazy(() => import('../screens/settings/Settings'));
+const Login = React.lazy(() => import('../screens/login/Login'));
 
 // Fallback component while loading
 const LoadingScreen = () => (
@@ -30,7 +31,8 @@ const RootStack = () => {
         headerTitleStyle: {
           fontWeight: 'bold',
         },
-      }}>
+      }}>  
+            <Stack.Screen name="Login" component={Login} />
             <Stack.Screen name="Home" component={HomeScreen} />
             <Stack.Screen name="Settings" component={SettingsScreen} />
         </Stack.Navigator>
