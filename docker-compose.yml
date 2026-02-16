@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8081:8081" # Map host port 8081 to container port 8081 for the bundler
+    volumes:
+      - .:/app # Mount your local project directory to the container's /app directory for live code changes
+      - /app/node_modules # Keep the container's node_modules separate from the host's
+    stdin_open: true # Keep the container running in interactive mode
+    tty: true
+    environment:
+      # Crucial for React Native: tells the bundler which IP address to use
+      REACT_NATIVE_PACKAGER_HOSTNAME: 192.168.222.131 
